@@ -1,0 +1,273 @@
+/* -------------------------
+📁 styles.css – עיצוב מותאם אישית
+-------------------------- */
+
+/* הגדרות כלליות */
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #213547;
+}
+
+/* קישורים */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* גוף הדף */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* כפתורים */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+/* כותרות */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-align: right;
+}
+
+/* טבלה בסל הקניות */
+.table td,
+.table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* 🎯 כרטיס מוצר – גובה אחיד ויישור */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 440px; /* גובה אחיד לכל הכרטיסים */
+}
+
+/* 🎯 תמונה – במיכל מוגדר */
+.product-image-container {
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.product-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 🎯 גוף הכרטיס */
+.product-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+/* 🎯 כפתורים למטה */
+.product-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+/* 🎞️ קרוסלת תמונות */
+.global-carousel {
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-image {
+  height: 400px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+}
+.category-card {
+  width: 180px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+}
+
+.category-image-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.category-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+/* סגנון לתמונות קטגוריות */
+.category-image-container {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.category-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.category-card {
+  transition: transform 0.2s;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+}
+/* 🧩 קטגוריות – מיקום ויישור */
+.category-row {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* 📦 כרטיס קטגוריה */
+.category-card {
+  height: 200px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  margin: 0 auto;
+}
+
+.category-card:hover {
+  transform: scale(1.03);
+}
+
+/* 🖼 תמונת קטגוריה */
+.category-image-container {
+  height: 120px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.category-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* 📦 כרטיס קטגוריה – גרסה מוגדלת */
+.category-card {
+  height: 270px; /* ⬆️ גובה מוגדל */
+  width: 200px; /* ⬆️ רוחב מוגדל */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  margin: 0 auto;
+}
+
+/* 🖼 אזור התמונה של קטגוריה */
+.category-image-container {
+  height: 170px; /* ⬆️ יותר גובה לתמונה */
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+/* 🖼 תמונה עצמה */
+.category-image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+/* 🧾 עמוד פרטי מוצר */
+.product-details {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
