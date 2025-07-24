@@ -3,17 +3,13 @@
 // כולל קישורים לעמודים הראשיים + מעבר לעגלת קניות
 // -------------------------
 
-import React, { useContext } from "react"; // ✅ נוספה ספריית useContext
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Badge } from "react-bootstrap";
-
-// בעתיד נוכל לחבר את זה ל־CartContext כדי להראות כמה פריטים יש בסל
-// למשל: const { cart } = useContext(CartContext);
-import { CartContext } from "../context/CartContext"; // ✅ נוספה קריאה לקונטקסט
+import { CartContext } from "../context/CartContext";
 
 function AppNavbar() {
-  const { cart } = useContext(CartContext); // ✅ שימוש בקונטקסט כדי לקבל את העגלה
-
+  const { cart } = useContext(CartContext);
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -31,8 +27,7 @@ function AppNavbar() {
               מוצרים
             </Nav.Link>
             <Nav.Link as={Link} to="/cart">
-              סל קניות <Badge bg="secondary">{cart.length}</Badge>{" "}
-              {/* ✅ הצגת כמות בעגלה */}
+              סל קניות <Badge bg="secondary">{cart.length}</Badge>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
